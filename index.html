@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>
-	Welcome
-</title>
+	<head>
+		<title>
+			Welcome
+		</title>
+		<!--links to the css-->
+		<link rel="stylesheet" href="CSS/Homepage_style.css">
 
-<style>
-	body {
-		background-color: rgb(43, 41, 41);
-		color: white;
-	}
+	</head>
+	<body>
+		<!--this is the top section with the title and links-->
+		<div class="header">
+			<div class="title">
+				<h1>
+					Tech Newbie
+				</h1>
+			</div>
+			<div class="links">
+				<!--If you want to add more links this is where those go-->
+				<div class="text-link">
+					<a href="http://127.0.0.1:5500/blog.html" class="text-link">Blog</a>
+				</div>
+			</div>
+		</div>
 
-	.welcome {
-		text-align: center;
-		color: white;
-		transition: color .5s;
-	}
-
-	.welcome:hover {
-		color: grey;
-		cursor: pointer;
-	}
-	
-</style>
-</head>
-<body>
-	<h1 class="welcome">
-		Welcome to my website!
-	</h1>
-	<p class="welcome">
-		Hey I'm brand new to this, so things are going to be a little rough at first while I learn. However, I learn pretty quickly so it shouldn't stay the same for long. 
-	</p>
-</body>
+		<!--some filler photos for now-->
+		<div style="width:500px;">
+			<a href="http://127.0.0.1:5500/blog.html">
+				<img src="http://cdn2.hubspot.net/hub/53/file-23115630-jpg/blog/images/blogging_image.jpg" >
+			</a>
+			<div style="color:black; font-size:20px; text-align:center;">
+				the picture also links to the blog, for funzies!
+			</div>
+		</div>
+	</body>
 </html>

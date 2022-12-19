@@ -1,0 +1,54 @@
+
+body {
+    background-color: rgb(201, 201, 201);
+    color: white;
+    margin:0px;
+}
+
+.welcome {
+    text-align: center;
+    color: white;
+    transition: color .5s;
+}
+
+.welcome:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+/*this is for the bar at the top*/
+
+.header {
+    width: 100%;
+    background-color: rgb(88, 88, 88);
+    color: white;
+    padding-top: 1px;
+    padding-bottom: 25px;
+
+}
+
+.title {
+    text-align: center;
+    width: 100%;
+
+}
+
+.links {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.text-link {
+    text-align: center;
+    transition: hover .5s;
+    color: white;
+}
+
+.text-link:hover {
+    color: grey;
+}
+
+.text-link:active {
+    padding-top: 2px;
+    padding-left: 2px;
+}
