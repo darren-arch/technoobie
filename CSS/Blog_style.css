@@ -1,0 +1,29 @@
+.blog-arrangement {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.blog {
+    display:grid;
+    background-color: grey;
+    margin-top: 5px;
+}
+.blog-title {
+    text-align: Center;
+    font-size: 30px;
+
+}
+.blog-text {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+.blog-link {
+    text-align: center;
+    font-size: 18px;
+    color: lightblue;
+    font-style: normal; 
+    transition: opacity .2s;
+}
+.blog-link:hover {
+    opacity: .5;
+}
