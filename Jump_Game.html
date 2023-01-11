@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jump Game</title>
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <script>
+    // Initialize canvas
+    var canvas = document.getElementById("game");
+    var ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Create player object
+    var player = {
+      x: 50,
+      y: canvas.height - 100,
+      width: 50,
+      height: 50,
+      speed: 10,
+      jumping: false,
+      jumpSpeed: 15
+    };
+
+    // Draw player on canvas
+    function drawPlayer() {
+      ctx.fillRect(player.x, player.y, player.width, player.height);
+    }
+
+    // Handle player jump
+    function jump() {
+      if (!player.jumping) {
+        player.jumping = true;
+        setInterval(function() {
+          player.y -= player.jumpSpeed;
+          player.jumpSpeed -= 0.5;
+          if (player.jumpSpeed <= 0) {
+            clearInterval();
+            player.jumping = false;
+            player.jumpSpeed = 15;
+          }
+        }, 10);
+      }
+    }
+
+    // Handle key press events
+    document.onkeydown = function(event) {
+      if (event.keyCode == 32) { // Spacebar
+        jump();
+      }
+    }
+
+    // Main game loop
+    function gameLoop() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawPlayer();
+      requestAnimationFrame(gameLoop);
+    }
+
+    gameLoop();
+  </script>
+</body>
+</html>
